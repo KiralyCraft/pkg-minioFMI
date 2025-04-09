@@ -166,6 +166,8 @@ const (
 // JWT claims supported substitutions.
 // https://www.iana.org/assignments/jwt/jwt.xhtml#claims
 const (
+	JWTOid KeyName = "jwt:oid"
+
 	// JWTSub - JWT subject claim substitution.
 	JWTSub KeyName = "jwt:sub"
 
@@ -219,6 +221,7 @@ const (
 // JWTKeys - Supported JWT keys, non-exhaustive list please
 // expand as new claims are standardized.
 var JWTKeys = []KeyName{
+	JWTOid,
 	JWTSub,
 	JWTIss,
 	JWTAud,
@@ -245,6 +248,7 @@ var JWTKeys = []KeyName{
 
 // AllSupportedKeys - is list of all all supported keys.
 var AllSupportedKeys = []KeyName{
+
 	S3SignatureVersion,
 	S3AuthType,
 	S3SignatureAge,
@@ -280,6 +284,7 @@ var AllSupportedKeys = []KeyName{
 	RequestObjectTag,
 	ExistingObjectTag,
 	RequestObjectTagKeys,
+	JWTOid,
 	JWTSub,
 	JWTIss,
 	JWTAud,
